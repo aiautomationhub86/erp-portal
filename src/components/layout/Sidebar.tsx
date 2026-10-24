@@ -29,7 +29,8 @@ import {
   Boxes,
   FileSpreadsheet,
   Globe,
-  LogOut
+  LogOut,
+  BarChart3
 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { UserRole } from '@/lib/types';
@@ -118,6 +119,13 @@ const NAVIGATION_ITEMS: SidebarItem[] = [
     href: '/accounts',
     icon: FileSpreadsheet,
     allowedRoles: ['DIRECTOR', 'PRINCIPAL', 'ACCOUNTANT', 'SUPER_ADMIN', 'ADMIN'],
+  },
+  {
+    name: 'Institutional Reports',
+    href: '/reports',
+    icon: BarChart3,
+    badge: 'Audited',
+    allowedRoles: ['DIRECTOR', 'PRINCIPAL', 'ACCOUNTANT', 'SUPER_ADMIN', 'ADMIN', 'HOD'],
   },
   {
     name: 'Inventory & Campus Assets',
